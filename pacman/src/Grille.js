@@ -13,7 +13,7 @@ const Grille = ()=> {
     const renderGrille = (Grille) => {
             const grid1d = [].concat.apply([], Grille)
             return grid1d.map( (el, i) => {
-                return <div key={i} className={mapping[el]}></div>
+                return <div key={i} style={{gridColumn : (i%19) +1 , gridRow : Math.floor(i/19) +1}} className={mapping[el]}></div>
             } );
         }
     

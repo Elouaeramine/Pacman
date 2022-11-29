@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './Header';
-import Pacman from './Pacman';
+import Jeu from './Jeu';
 import Fantom from './Fantom';
 function App() {
   return (
     <div className="App">
         <Header/>
         <div className='container'>
-          <Pacman/>
+          <Jeu/>
         </div>
         
     </div>
