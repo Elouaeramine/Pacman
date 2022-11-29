@@ -2,6 +2,7 @@ import React from 'react';
 import './grille.css'
 import GrilleDef  from './utils/GrilleDef';
 import Fantom from './Fantom';
+import Pacman from './Pacman';
 const Grille = ()=> {
     const mapping = {
         0 : "mur",
@@ -25,6 +26,7 @@ return(
         <Fantom classFantome="fantome-rouge"/>
         <Fantom classFantome="fantome-orange"/>
         <Fantom classFantome="fantome-vert"/>
+        <Pacman/>
     </div>
 );
 }
