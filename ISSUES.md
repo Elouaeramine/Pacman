@@ -10,3 +10,4 @@
 - Utilisation des var non conseillée . Il faudra utiliser const ou let
 - Dans pacman.js , Il faut définir un event listener au lieu d'utiliser document.onKeyPress
 - Il faut Ajouter des Instructions pour l'utilisateur (Comment jouer Pacman)
+- Problème Logique ( Les Phantomes quittent la grille )
