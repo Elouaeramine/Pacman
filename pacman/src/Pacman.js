@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import GrilleDef from "./utils/GrilleDef";
-const Pacman = ({setScore , setPacmanDirection}) => {
+const Pacman = ({setScore , setPacmanDirection ,setPacmanPosition}) => {
     const [x,setX] = useState(5);
     const [y,setY] = useState(2)
     const [bonbon , setCompteBonbon] =useState(0)
@@ -51,6 +51,7 @@ const Pacman = ({setScore , setPacmanDirection}) => {
             default:
                 break;          
         }
+        mangeBonbon()
     }
 
     const  appuieTouche =(event)=>{
@@ -61,21 +62,28 @@ const Pacman = ({setScore , setPacmanDirection}) => {
         case"Q":
             bougePacMan(0)
             setDirection(0)
+            setPacmanPosition({x,y})
         break;
         case"d":
         case"D":
             bougePacMan(1)
             setDirection(1)
+            setPacmanPosition({x,y})
+
         break;
         case"z":
         case"Z":
             bougePacMan(2)
             setDirection(2)
+            setPacmanPosition({x,y})
+
         break;
         case"s":
         case"S":
             bougePacMan(3)
             setDirection(3)
+            setPacmanPosition({x,y})
+
         break;
         default:
             break; 
@@ -89,18 +97,21 @@ const Pacman = ({setScore , setPacmanDirection}) => {
           {
             if(GrilleDef[ligne][col]===2)
             {
-             setCompteBonbon(bonbon++);
+             setCompteBonbon((bonbon) =>bonbon+1);
             }
           }
         }
     }
 
-    const mangeBonbon = ( ) =>{ 
-        if(GrilleDef[y-1][x-1] == 2)
+
+    
+    const mangeBonbon = () =>{ 
+        if(GrilleDef[y-1][x-1] === 2)
         {
           GrilleDef[y-1][x-1] = 1;
-          setCompteBonbon(bonbon -1 );
+          setCompteBonbon(bonbon -1);
           setScore((score) => score+1);
+
         }
     }
 

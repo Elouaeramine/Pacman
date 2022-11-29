@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './grille.css'
 import GrilleDef  from './utils/GrilleDef';
 import Fantom from './Fantom';
 import Pacman from './Pacman';
+
+
 const Grille = ({setScore , setPacmanDirection})=> {
+    const [pacmanPosition , setPacmanPosition] = useState(0)
+
     const mapping = {
         0 : "mur",
         1 :  "sol",
@@ -22,11 +26,11 @@ const Grille = ({setScore , setPacmanDirection})=> {
 return(
     <div id="grille" style={{gridTemplateColumns: `repeat(${GrilleDef[0].length}, 40px)`, gridTemplateRows : `repeat(${GrilleDef.length} ,40px)`}}>
         {renderGrille(GrilleDef)}
-        <Fantom classFantome="fantome-bleu"/>
-        <Fantom classFantome="fantome-rouge"/>
-        <Fantom classFantome="fantome-orange"/>
-        <Fantom classFantome="fantome-vert"/>
-        <Pacman setScore={setScore} setPacmanDirection={setPacmanDirection}/>
+        <Fantom classFantome="fantome-bleu" pacmanPosition={pacmanPosition}/>
+        <Fantom classFantome="fantome-rouge" pacmanPosition={pacmanPosition}/>
+        <Fantom classFantome="fantome-orange" pacmanPosition={pacmanPosition}/>
+        <Fantom classFantome="fantome-vert" pacmanPosition={pacmanPosition}/>
+        <Pacman setScore={setScore} setPacmanDirection={setPacmanDirection} setPacmanPosition={setPacmanPosition}/>
     </div>
 );
 }

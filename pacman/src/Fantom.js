@@ -3,7 +3,7 @@ import GrilleDef from './utils/GrilleDef'
 import { useInterval } from 'usehooks-ts'
 import { useEffect, useState } from 'react'
 
-const Fantom = ({classFantome})=> {
+const Fantom = ({classFantome , pacmanPosition})=> {
     const [x , setX ] = useState(5)
     const [y , setY ] = useState(8)
     const [direction ,setDirection] = useState(0)
@@ -54,6 +54,9 @@ const Fantom = ({classFantome})=> {
 
     useInterval(()=>{
         setDirection(getRandomIntInclusive(0,3))
+        if(x === pacmanPosition.x && y === pacmanPosition.y) {
+            alert("Lost")
+        }
     }, 1000);
 
 
