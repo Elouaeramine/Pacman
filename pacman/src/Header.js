@@ -1,9 +1,9 @@
 import './header.css'
-const Header = () => {
+const Header = ({score , pacmanDirection}) => {
     return( 
         <div className="header">
-            <p> Score :</p>
-            <p> Sens Pacman:</p>
+            <p> Score : {score}</p>
+            <p> Sens Pacman: {pacmanDirection}</p>
         </div>
     )
 }

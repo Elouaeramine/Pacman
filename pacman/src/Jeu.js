@@ -1,9 +1,9 @@
 import Grille from "./Grille";
 
-const Jeu = () => {
+const Jeu = ({setScore , setPacmanDirection}) => {
     return(
     <div>
-        <Grille/>
+        <Grille setScore={setScore} setPacmanDirection={setPacmanDirection}/>
     </div>
     );
 }

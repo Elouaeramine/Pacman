@@ -3,7 +3,7 @@ import './grille.css'
 import GrilleDef  from './utils/GrilleDef';
 import Fantom from './Fantom';
 import Pacman from './Pacman';
-const Grille = ()=> {
+const Grille = ({setScore , setPacmanDirection})=> {
     const mapping = {
         0 : "mur",
         1 :  "sol",
@@ -26,7 +26,7 @@ return(
         <Fantom classFantome="fantome-rouge"/>
         <Fantom classFantome="fantome-orange"/>
         <Fantom classFantome="fantome-vert"/>
-        <Pacman/>
+        <Pacman setScore={setScore} setPacmanDirection={setPacmanDirection}/>
     </div>
 );
 }
