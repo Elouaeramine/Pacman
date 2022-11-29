@@ -1,7 +1,9 @@
+import Grille from "./Grille";
+
 const Pacman = () => {
     return(
     <div>
-        <h1>Pacman</h1>
+        <Grille/>
     </div>
     );
 }

@@ -8,31 +8,31 @@ justify-content: center;
   margin-top: 5%
 }
 .mur{
-  background-image: url(../images/murbrique.jpg);
+  background-image: url(../pacman/public/images/murbrique.jpg);
 }
 .sol{
   background-color: black;
 }
 .bonbon{
-  background-image: url(../images/bonbon.gif);
+  background-image: url(../pacman/public/images/bonbon.gif);
 }
 .pacman{
-  background-image: url(../images/pacman4.gif);
+  background-image: url(../pacman/public/images/pacman4.gif);
 }
 .fantome{
-  background-image: url(../images/fantome_bleu1.gif);
+  background-image: url(../pacman/public/images/fantome_bleu1.gif);
 }
 .fantome-bleu{
-  background-image: url(../images/fantome_bleu1.gif);
+  background-image: url(../pacman/public/images/fantome_bleu1.gif);
 }
 .fantome-rouge{
-  background-image: url(../images/fantome_rouge1.gif);
+  background-image: url(../pacman/public/images/fantome_rouge1.gif);
 }
 .fantome-orange{
-  background-image: url(../images/fantome_orange1.gif);
+  background-image: url(../pacman/public/images/fantome_orange1.gif);
 }
 .fantome-vert{
-  background-image: url(../images/fantome_vert1.gif);
+  background-image: url(../pacman/public/images/fantome_vert1.gif);
 }
 p{
 font-size: 1.6em;
