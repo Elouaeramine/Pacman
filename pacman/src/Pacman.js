@@ -1,3 +1,4 @@
+import Fantom from "./Fantom";
 import Grille from "./Grille";
 
 const Pacman = () => {
